@@ -1,113 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Ansh & Vansh Electronic | Akhnoor</title>
-<meta name="description" content="Ansh & Vansh Electronic, Akhnoor — electronics, accessories and appliances at wholesale and retail prices.">
-<style>
-:root{--bg:#070b14;--card:#101827;--text:#f7f9ff;--muted:#aab5c9;--accent:#5ee7ff;--accent2:#7c5cff}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,Arial,sans-serif;background:#f5f7fb;color:#151923}
-.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:35px 18px;background:radial-gradient(circle at 20% 20%,#173b63 0,#070b14 42%),linear-gradient(135deg,#070b14,#121b31);position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:#5ee7ff20;filter:blur(20px);right:-130px;top:-130px}
-.hero-content{position:relative;z-index:1;max-width:850px}
-.logo{font-size:58px;margin-bottom:12px}
-h1{font-size:clamp(38px,8vw,76px);line-height:1.02;letter-spacing:-2px}
-.hero p{font-size:19px;color:#cbd7ea;margin:18px auto;max-width:650px;line-height:1.6}
-.pill{display:inline-block;border:1px solid #ffffff30;background:#ffffff0d;padding:10px 17px;border-radius:999px;margin-bottom:18px}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-.btn{padding:14px 20px;border-radius:13px;text-decoration:none;font-weight:800;transition:.2s}
-.btn:hover{transform:translateY(-2px)}
-.primary{background:var(--accent);color:#061018}.darkbtn{background:#ffffff12;color:white;border:1px solid #ffffff25}.green{background:#20c76b;color:white}
-section{padding:70px 18px}
-.wrap{max-width:1100px;margin:auto}
-.title{text-align:center;font-size:34px;margin-bottom:12px}.sub{text-align:center;color:#697386;max-width:650px;margin:0 auto 30px;line-height:1.6}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
-.product{background:white;border-radius:20px;padding:25px 18px;text-align:center;box-shadow:0 10px 35px #17203310;border:1px solid #e8ecf4;transition:.25s}
-.product:hover{transform:translateY(-5px);box-shadow:0 15px 40px #17203318}
-.icon{font-size:42px;margin-bottom:12px}.product h3{font-size:18px;margin-bottom:7px}.product p{color:#70798a;font-size:14px;line-height:1.5}
-.banner{background:linear-gradient(135deg,#0b1220,#182c4d);color:white;border-radius:28px;padding:42px 25px;text-align:center}
-.banner h2{font-size:34px;margin-bottom:10px}.banner p{color:#c4d0e3;line-height:1.6}
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:25px}
-.contact-card{background:white;border-radius:20px;padding:24px;text-align:center;box-shadow:0 8px 28px #17203310}.contact-card .big{font-size:32px;margin-bottom:10px}.contact-card a{color:#151923;font-weight:800;text-decoration:none}
-.map{margin-top:35px;border-radius:22px;overflow:hidden;background:#e9edf5;padding:8px}.map a{display:block;text-align:center;padding:28px;text-decoration:none;font-weight:800;color:#111;background:white;border-radius:16px}
-footer{background:#070b14;color:white;text-align:center;padding:30px 18px}.muted{color:#9aa7bb;font-size:14px;margin-top:7px}
-.float{position:fixed;right:18px;bottom:18px;background:#20c76b;color:white;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:28px;box-shadow:0 8px 25px #0004;z-index:10}
-@media(max-width:500px){.logo{font-size:46px}.hero{min-height:88vh}.title{font-size:29px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ansh & Vansh Electronics | Electronics, Accessories & Electrical</title>
+
+  <meta name="description"
+    content="Ansh & Vansh Electronics - Your one-stop shop for electronics, mobile accessories, audio products, remotes, lighting and everyday electrical essentials.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      color: white;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at top right, rgba(59,130,246,.35), transparent 35%),
+        linear-gradient(135deg, #0f172a, #1d4ed8);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 22px;
+      border-radius: 22px;
+      background: white;
+      color: #1d4ed8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.25);
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: .5px;
+      margin-bottom: 20px;
+      background: rgba(255,255,255,.08);
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #dbeafe;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      background: white;
+      color: #1d4ed8;
+    }
+
+    .green {
+      background: #16a34a;
+      color: white;
+    }
+
+    .outline {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+      background: rgba(255,255,255,.08);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 70px 20px;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .sub {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: #64748b;
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(15,23,42,.08);
+      border: 1px solid #e5e7eb;
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15,23,42,.12);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* WHY US */
+    .why {
+      background: #eaf1ff;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .feature span {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: #111827;
+      color: white;
+      border-radius: 24px;
+      padding: 45px 25px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* FLOATING WHATSAPP */
+    .float-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #16a34a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+      z-index: 999;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 620px;
+        padding: 55px 18px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .products,
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+
+      .title {
+        font-size: 29px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="hero">
-<div class="hero-content">
-<div class="logo">⚡</div>
-<div class="pill">AKHNOOR • WHOLESALE & RETAIL</div>
-<h1>Ansh & Vansh<br>Electronic</h1>
-<p>Your one-stop shop for electronics, mobile accessories, audio products, remotes, lighting and everyday electrical essentials.</p>
-<div class="btns">
-<a class="btn primary" href="tel:+919906502637">📞 Call Now</a>
-<a class="btn green" href="https://wa.me/919906502637?text=Hello%20Ansh%20%26%20Vansh%20Electronic%2C%20I%20want%20to%20know%20about%20a%20product.">💬 WhatsApp</a>
-<a class="btn darkbtn" href="https://maps.app.goo.gl/KdaHGVMWxJu9jiUB6" target="_blank">📍 Get Directions</a>
-</div>
-</div>
-</header>
+  <!-- NAVIGATION -->
+  <header>
 
-<section>
-<div class="wrap">
-<h2 class="title">Everything You Need</h2>
-<p class="sub">From small accessories to useful home electronics — ask us about availability and current prices.</p>
-<div class="products">
+    <nav>
+      <div class="brand">⚡ Ansh & Vansh</div>
 
-<div class="product"><div class="icon">📡</div><h3>DTH & Set-Top Box Remotes</h3><p>Jio, Airtel, Tata Play, Dish TV & more.</p></div>
-<div class="product"><div class="icon">🤖</div><h3>Android & Google TV Remotes</h3><p>Smart TV, Android TV & Google TV remotes.</p></div>
-<div class="product"><div class="icon">🔄</div><h3>Universal Remotes</h3><p>One remote for multiple compatible devices.</p></div>
-<div class="product"><div class="icon">🔊</div><h3>Soundbar & Home Theatre</h3><p>Remote controls for audio systems and speakers.</p></div>
-<div class="product"><div class="icon">🔦</div><h3>Torches</h3><p>Handy lighting solutions for home and outdoor use.</p></div>
-<div class="product"><div class="icon">🔊</div><h3>Speakers</h3><p>Portable audio options for music and entertainment.</p></div>
-<div class="product"><div class="icon">🎧</div><h3>Headphones</h3><p>Comfortable options for everyday listening.</p></div>
-<div class="product"><div class="icon">🔌</div><h3>Chargers & Cables</h3><p>Charging essentials and useful connectivity accessories.</p></div>
-<div class="product"><div class="icon">🎵</div><h3>Earbuds</h3><p>Wireless audio choices for daily use.</p></div>
-<div class="product"><div class="icon">🌀</div><h3>Fans</h3><p>Useful cooling products for your home and shop.</p></div>
-<div class="product"><div class="icon">🔥</div><h3>Heaters</h3><p>Heating essentials for the colder season.</p></div>
-</div>
-</div>
-</section>
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-<section style="padding-top:0">
-<div class="wrap">
-<div class="banner">
-<h2>Wholesale & Retail Prices</h2>
-<p>Buying one item or multiple pieces? Contact us for product availability and the latest price.</p>
-<div class="btns">
-<a class="btn primary" href="tel:+919906502637">Call 9906502637</a>
-<a class="btn green" href="https://wa.me/919906502637">Chat on WhatsApp</a>
-</div>
-</div>
-</div>
-</section>
+    <!-- HERO -->
+    <div class="hero">
 
-<section style="padding-top:20px">
-<div class="wrap">
-<h2 class="title">Visit Our Shop</h2>
-<div class="contact">
-<div class="contact-card"><div class="big">📍</div><h3>Location</h3><p>Akhnoor, Jammu & Kashmir</p></div>
-<div class="contact-card"><div class="big">📞</div><h3>Call / WhatsApp</h3><a href="tel:+919906502637">9906502637</a></div>
-<div class="contact-card"><div class="big">📸</div><h3>Instagram</h3><a href="https://instagram.com/vansh__mahajan_" target="_blank">@vansh__mahajan_</a></div>
-</div>
-<div class="map">
-<a href="https://maps.app.goo.gl/KdaHGVMWxJu9jiUB6" target="_blank">🗺️ Open Ansh & Vansh Electronic on Google Maps →</a>
-</div>
-</div>
-</section>
+      <div class="hero-content">
 
-<footer>
-<strong>⚡ Ansh & Vansh Electronic</strong>
-<div class="muted">Akhnoor • Wholesale & Retail Electronics</div>
-<div class="muted">© 2026 Ansh & Vansh Electronic</div>
-</footer>
+        <div class="logo">⚡</div>
 
-<a class="float" href="https://wa.me/919906502637" aria-label="WhatsApp">💬</a>
+        <div class="pill">
+          MANUFACTURER • WHOLESALE & RETAIL
+        </div>
+
+        <h1>Ansh & Vansh Electronics</h1>
+
+        <p>
+          Your one-stop shop for electronics, mobile accessories,
+          audio products, remotes, lighting and everyday electrical essentials.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn primary"
+            href="tel:+919906520637">
+            📞 Call Now
+          </a>
+
+          <a
+            class="btn green"
+            href="https://wa.me/919906520637"
+            target="_blank">
+            💬 WhatsApp
+          </a>
+
+          <a
+            class="btn outline"
+            href="https://www.google.com/maps/search/?api=1&query=Ansh+and+Vansh+Electronics"
+            target="_blank">
+            📍 Get Directions
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- PRODUCTS -->
+  <section id="products">
+
+    <div class="wrap">
+
+      <h2 class="title">
+        Everything You Need
+      </h2>
+
+      <p class="sub">
+        From everyday electronic essentials to mobile accessories,
+        we provide products for homes, shops and businesses.
+      </p>
+
+      <div class="products">
+
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Mobile Accessories</h3>
+          <p>
+            Chargers, cables, adapters, holders and other useful
+            mobile accessories.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎧</div>
+          <h3>Audio Products</h3>
+          <p>
+            Speakers, earphones, headphones and other audio
+            accessories for everyday use.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📺</div>
+          <h3>Remotes</h3>
+          <p>
+            TV, set-top box and other electronic replacement
+            remotes.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💡</div>
+          <h3>Lighting</h3>
+          <p>
+            LED lights, bulbs and lighting essentials for homes
+            and commercial spaces.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔌</div>
+          <h3>Electrical Items</h3>
+          <p>
+            Everyday electrical accessories and useful electronic
+            essentials.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🛒</div>
+          <h3>Wholesale & Retail</h3>
+          <p>
+            Products available for both individual customers
+            and bulk business requirements.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY US -->
+  <section class="why" id="why">
+
+    <div class="wrap">
+
+      <h2 class="title">
+        Why Choose Us?
+      </h2>
+
+      <p class="sub">
+        We focus on useful products, competitive pricing and
+        friendly customer service.
+      </p>
+
+      <div class="features">
+
+        <div class="feature">
+          <div class="icon">🏷️</div>
+          <strong>Competitive Prices</strong>
+          <span>
+            Value-focused pricing for retail and wholesale customers.
+          </span>
+        </div>
+
+        <div class="feature">
+          <div class="icon">📦</div>
+          <strong>Wide Range</strong>
+          <span>
+            Electronics and accessories for everyday requirements.
+          </span>
+        </div>
+
+        <div class="feature">
+          <div class="icon">🤝</div>
+          <strong>Customer Support</strong>
+          <span>
+            Contact us directly for product availability and prices.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="wrap">
+
+      <div class="contact-box">
+
+        <h2>Need Electronics?</h2>
+
+        <p>
+          Ask us about product availability, current prices
+          and wholesale requirements.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            class="btn primary"
+            href="tel:+919906520637">
+            📞 Call Us
+          </a>
+
+          <a
+            class="btn green"
+            href="https://wa.me/919906520637"
+            target="_blank">
+            💬 Chat on WhatsApp
+          </a>
+
+          <a
+            class="btn outline"
+            href="https://www.google.com/maps/search/?api=1&query=Ansh+and+Vansh+Electronics"
+            target="_blank">
+            📍 Find Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 <strong>Ansh & Vansh Electronics</strong>.
+      All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    class="float-whatsapp"
+    href="https://wa.me/919906520637"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
 </body>
 </html>
