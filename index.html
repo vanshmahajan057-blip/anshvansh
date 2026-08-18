@@ -7,7 +7,7 @@
   <title>Ansh & Vansh Electronics | Electronics, Accessories & Electrical</title>
 
   <meta name="description"
-    content="Ansh & Vansh Electronics - Your one-stop shop for electronics, mobile accessories, audio products, remotes, lighting and everyday electrical essentials.">
+    content="Ansh & Vansh Electronics - Electronics, mobile accessories, audio products, remotes, lighting and electrical essentials. Wholesale & Retail.">
 
   <style>
     * {
@@ -22,8 +22,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
+      background: #f8fafc;
+      color: #14213d;
       line-height: 1.6;
     }
 
@@ -31,260 +31,476 @@
       text-decoration: none;
     }
 
-    /* HEADER */
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     header {
-      background: linear-gradient(135deg, #111827, #1e3a8a);
+      background: #061633;
       color: white;
     }
 
     nav {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: auto;
-      padding: 18px 20px;
+      padding: 18px 22px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     .brand {
-      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 19px;
       font-weight: 800;
+    }
+
+    .brand-icon {
+      color: #ffc400;
+      font-size: 27px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #2997ff;
+      font-size: 12px;
+      margin-top: -4px;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      gap: 28px;
     }
 
     .nav-links a {
-      color: white;
+      color: #dbeafe;
       font-size: 14px;
       font-weight: 600;
+      transition: .2s;
     }
 
-    /* HERO */
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .menu {
+      display: none;
+      font-size: 27px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 70px 20px;
       background:
-        radial-gradient(circle at top right, rgba(59,130,246,.35), transparent 35%),
-        linear-gradient(135deg, #0f172a, #1d4ed8);
+        radial-gradient(circle at 85% 20%, rgba(24, 119, 255, .35), transparent 30%),
+        linear-gradient(135deg, #061633, #082c6b);
+      padding: 78px 22px 55px;
+      overflow: hidden;
     }
 
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 22px;
-      border-radius: 22px;
-      background: white;
-      color: #1d4ed8;
-      display: flex;
+    .hero-inner {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
       align-items: center;
-      justify-content: center;
-      font-size: 42px;
-      box-shadow: 0 15px 40px rgba(0,0,0,.25);
+      gap: 45px;
     }
 
     .pill {
       display: inline-block;
       padding: 8px 15px;
-      border: 1px solid rgba(255,255,255,.3);
       border-radius: 50px;
+      background: rgba(37, 135, 255, .22);
+      border: 1px solid rgba(85, 165, 255, .35);
+      color: #dbeafe;
       font-size: 12px;
-      font-weight: bold;
-      letter-spacing: .5px;
+      font-weight: 800;
       margin-bottom: 20px;
-      background: rgba(255,255,255,.08);
     }
 
-    h1 {
-      font-size: clamp(38px, 7vw, 70px);
-      line-height: 1.05;
-      margin-bottom: 22px;
+    .hero h1 {
+      color: white;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.03;
+      margin-bottom: 20px;
     }
 
-    .hero p {
-      max-width: 720px;
-      margin: auto;
+    .hero h1 span {
+      color: #218cff;
+    }
+
+    .hero-description {
+      max-width: 650px;
       color: #dbeafe;
       font-size: 17px;
+      margin-bottom: 30px;
     }
 
     .hero-actions {
-      margin-top: 30px;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 13px 21px;
-      border-radius: 12px;
+      padding: 13px 22px;
+      border-radius: 10px;
       font-weight: 700;
-      transition: .2s;
+      font-size: 14px;
+      transition: .25s;
+      min-width: 135px;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     .primary {
       background: white;
-      color: #1d4ed8;
+      color: #0753b8;
     }
 
     .green {
-      background: #16a34a;
+      background: #16c66b;
       color: white;
     }
 
     .outline {
-      border: 1px solid rgba(255,255,255,.5);
+      border: 1px solid #318bff;
       color: white;
-      background: rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
     }
 
-    /* GENERAL SECTIONS */
+    .hero-visual {
+      position: relative;
+      min-height: 330px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-orbit {
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(44,139,255,.35), rgba(44,139,255,.03) 65%);
+      border: 1px solid rgba(65,155,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .big-icon {
+      font-size: 125px;
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,.35));
+    }
+
+    .floating-item {
+      position: absolute;
+      background: white;
+      border-radius: 16px;
+      padding: 14px;
+      font-size: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    }
+
+    .item-one {
+      top: 20px;
+      right: 15px;
+    }
+
+    .item-two {
+      bottom: 35px;
+      left: 15px;
+    }
+
+    .item-three {
+      bottom: 5px;
+      right: 55px;
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust-bar {
+      max-width: 1180px;
+      margin: 0 auto;
+      transform: translateY(25px);
+      background: rgba(3, 25, 62, .9);
+      border: 1px solid rgba(65,155,255,.3);
+      border-radius: 18px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: white;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+
+    .trust:last-child {
+      border-right: none;
+    }
+
+    .trust-icon {
+      font-size: 27px;
+    }
+
+    .trust strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .trust small {
+      color: #93c5fd;
+      font-size: 12px;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
     section {
-      padding: 70px 20px;
+      padding: 90px 22px;
     }
 
     .wrap {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: auto;
+    }
+
+    .section-label {
+      text-align: center;
+      color: #1478e8;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 7px;
     }
 
     .title {
       text-align: center;
-      font-size: 34px;
-      margin-bottom: 10px;
-      color: #111827;
+      color: #101d38;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 12px;
     }
 
     .sub {
-      text-align: center;
       max-width: 650px;
-      margin: 0 auto 35px;
+      margin: auto;
+      text-align: center;
       color: #64748b;
+      font-size: 15px;
+      margin-bottom: 45px;
     }
 
-    /* PRODUCTS */
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    #products {
+      background: #ffffff;
+    }
+
     .products {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
       background: white;
-      padding: 28px 22px;
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(15,23,42,.08);
-      border: 1px solid #e5e7eb;
-      transition: .2s;
+      border: 1px solid #e8edf5;
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(15, 35, 70, .07);
+      transition: .25s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(15,23,42,.12);
+      transform: translateY(-7px);
+      box-shadow: 0 18px 40px rgba(15, 35, 70, .13);
     }
 
-    .icon {
-      font-size: 38px;
-      margin-bottom: 15px;
+    .card-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: #eef6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
     }
 
     .card h3 {
+      color: #10203d;
+      font-size: 18px;
       margin-bottom: 8px;
-      font-size: 20px;
     }
 
     .card p {
       color: #64748b;
-      font-size: 14px;
+      font-size: 13px;
     }
 
-    /* WHY US */
+    /* =========================
+       WHY US
+    ========================= */
+
     .why {
-      background: #eaf1ff;
+      background: #eef6ff;
     }
 
     .features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 25px;
     }
 
     .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .feature-icon {
+      min-width: 62px;
+      height: 62px;
+      border-radius: 50%;
       background: white;
-      padding: 25px;
-      border-radius: 16px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 8px 20px rgba(20, 70, 130, .1);
     }
 
     .feature strong {
       display: block;
-      font-size: 18px;
-      margin-bottom: 8px;
+      color: #13223f;
+      font-size: 17px;
+      margin-bottom: 5px;
     }
 
     .feature span {
       color: #64748b;
-      font-size: 14px;
+      font-size: 13px;
     }
 
-    /* CONTACT */
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
     .contact-box {
-      background: #111827;
+      background:
+        radial-gradient(circle at right, rgba(30,120,255,.3), transparent 40%),
+        #061633;
+      border-radius: 22px;
+      padding: 42px 35px;
       color: white;
-      border-radius: 24px;
-      padding: 45px 25px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      box-shadow: 0 15px 40px rgba(3,20,50,.18);
     }
 
     .contact-box h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin-bottom: 8px;
     }
 
     .contact-box p {
-      color: #cbd5e1;
-      margin-bottom: 25px;
+      color: #bfdbfe;
+      font-size: 14px;
+      max-width: 480px;
     }
 
     .contact-buttons {
       display: flex;
-      justify-content: center;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 12px;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
-      background: #020617;
+      background: #020b1c;
       color: #94a3b8;
-      text-align: center;
-      padding: 25px 15px;
+      padding: 32px 22px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-weight: 800;
+    }
+
+    .footer-brand span {
+      display: block;
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 3px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
       font-size: 13px;
     }
 
-    footer strong {
-      color: white;
+    .copyright {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: 12px;
     }
 
-    /* FLOATING WHATSAPP */
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
     .float-whatsapp {
       position: fixed;
       right: 18px;
@@ -292,7 +508,7 @@
       width: 58px;
       height: 58px;
       border-radius: 50%;
-      background: #16a34a;
+      background: #16c66b;
       color: white;
       display: flex;
       align-items: center;
@@ -300,21 +516,111 @@
       font-size: 28px;
       box-shadow: 0 8px 25px rgba(0,0,0,.25);
       z-index: 999;
+      transition: .2s;
     }
 
-    /* MOBILE */
-    @media (max-width: 700px) {
+    .float-whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 15px 18px;
+      }
+
       .nav-links {
         display: none;
       }
 
-      .hero {
-        min-height: 620px;
-        padding: 55px 18px;
+      .menu {
+        display: block;
       }
 
-      .hero p {
-        font-size: 15px;
+      .hero {
+        padding: 55px 18px 35px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        max-width: 420px;
+        margin: auto;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 245px;
+      }
+
+      .product-orbit {
+        width: 220px;
+        height: 220px;
+      }
+
+      .big-icon {
+        font-size: 80px;
+      }
+
+      .floating-item {
+        padding: 10px;
+        font-size: 23px;
+      }
+
+      .item-one {
+        right: 20px;
+      }
+
+      .item-two {
+        left: 20px;
+      }
+
+      .item-three {
+        right: 45px;
+      }
+
+      .trust-bar {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 15px;
+        transform: translateY(15px);
+      }
+
+      .trust {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+        padding: 8px;
+      }
+
+      .trust:last-child {
+        border-bottom: none;
+      }
+
+      section {
+        padding: 65px 18px;
       }
 
       .products,
@@ -322,24 +628,32 @@
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 55px 18px;
+      .card {
+        padding: 26px 20px;
       }
 
-      .title {
-        font-size: 29px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-actions {
+      .contact-box {
         flex-direction: column;
+        text-align: center;
+        padding: 32px 20px;
+      }
+
+      .contact-box h2 {
+        font-size: 28px;
       }
 
       .contact-buttons {
+        width: 100%;
         flex-direction: column;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        gap: 18px;
       }
     }
   </style>
@@ -347,59 +661,126 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <header>
 
     <nav>
-      <div class="brand">⚡ Ansh & Vansh</div>
+
+      <a href="#" class="brand">
+        <span class="brand-icon">⚡</span>
+
+        <span class="brand-text">
+          Ansh & Vansh
+          <span>Electronics</span>
+        </span>
+      </a>
 
       <div class="nav-links">
         <a href="#products">Products</a>
         <a href="#why">Why Us</a>
         <a href="#contact">Contact</a>
       </div>
+
+      <div class="menu">☰</div>
+
     </nav>
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <div class="hero">
 
-      <div class="hero-content">
+      <div class="hero-inner">
 
-        <div class="logo">⚡</div>
+        <div>
 
-        <div class="pill">
-          MANUFACTURER • WHOLESALE & RETAIL
+          <div class="pill">
+            MANUFACTURER • WHOLESALE & RETAIL
+          </div>
+
+          <h1>
+            Ansh & Vansh<br>
+            <span>Electronics</span>
+          </h1>
+
+          <p class="hero-description">
+            Your one-stop shop for electronics, mobile accessories,
+            audio products, remotes, lighting and everyday electrical essentials.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="btn primary"
+              href="tel:+919906520637">
+              📞 Call Now
+            </a>
+
+            <a
+              class="btn green"
+              href="https://wa.me/919906520637"
+              target="_blank">
+              💬 WhatsApp
+            </a>
+
+            <a
+              class="btn outline"
+              href="https://www.google.com/maps/search/?api=1&query=Ansh+and+Vansh+Electronics"
+              target="_blank">
+              📍 Get Directions
+            </a>
+
+          </div>
+
         </div>
 
-        <h1>Ansh & Vansh Electronics</h1>
 
-        <p>
-          Your one-stop shop for electronics, mobile accessories,
-          audio products, remotes, lighting and everyday electrical essentials.
-        </p>
+        <div class="hero-visual">
 
-        <div class="hero-actions">
+          <div class="product-orbit">
+            <div class="big-icon">⚡</div>
+          </div>
 
-          <a
-            class="btn primary"
-            href="tel:+919906520637">
-            📞 Call Now
-          </a>
+          <div class="floating-item item-one">🎧</div>
+          <div class="floating-item item-two">💡</div>
+          <div class="floating-item item-three">📺</div>
 
-          <a
-            class="btn green"
-            href="https://wa.me/919906520637"
-            target="_blank">
-            💬 WhatsApp
-          </a>
+        </div>
 
-          <a
-            class="btn outline"
-            href="https://www.google.com/maps/search/?api=1&query=Ansh+and+Vansh+Electronics"
-            target="_blank">
-            📍 Get Directions
-          </a>
+      </div>
 
+
+      <!-- TRUST BAR -->
+
+      <div class="trust-bar">
+
+        <div class="trust">
+          <div class="trust-icon">🏆</div>
+          <div>
+            <strong>Quality Products</strong>
+            <small>Trusted & Tested</small>
+          </div>
+        </div>
+
+        <div class="trust">
+          <div class="trust-icon">📦</div>
+          <div>
+            <strong>Wide Range</strong>
+            <small>All in One Place</small>
+          </div>
+        </div>
+
+        <div class="trust">
+          <div class="trust-icon">👥</div>
+          <div>
+            <strong>Happy Customers</strong>
+            <small>Our Top Priority</small>
+          </div>
         </div>
 
       </div>
@@ -409,10 +790,17 @@
   </header>
 
 
-  <!-- PRODUCTS -->
+  <!-- =========================
+       PRODUCTS
+  ========================= -->
+
   <section id="products">
 
     <div class="wrap">
+
+      <div class="section-label">
+        OUR PRODUCTS
+      </div>
 
       <h2 class="title">
         Everything You Need
@@ -423,10 +811,11 @@
         we provide products for homes, shops and businesses.
       </p>
 
+
       <div class="products">
 
         <div class="card">
-          <div class="icon">📱</div>
+          <div class="card-icon">📱</div>
           <h3>Mobile Accessories</h3>
           <p>
             Chargers, cables, adapters, holders and other useful
@@ -435,7 +824,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">🎧</div>
+          <div class="card-icon">🎧</div>
           <h3>Audio Products</h3>
           <p>
             Speakers, earphones, headphones and other audio
@@ -444,7 +833,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">📺</div>
+          <div class="card-icon">📺</div>
           <h3>Remotes</h3>
           <p>
             TV, set-top box and other electronic replacement
@@ -453,7 +842,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">💡</div>
+          <div class="card-icon">💡</div>
           <h3>Lighting</h3>
           <p>
             LED lights, bulbs and lighting essentials for homes
@@ -462,7 +851,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">🔌</div>
+          <div class="card-icon">🔌</div>
           <h3>Electrical Items</h3>
           <p>
             Everyday electrical accessories and useful electronic
@@ -471,7 +860,7 @@
         </div>
 
         <div class="card">
-          <div class="icon">🛒</div>
+          <div class="card-icon">🛒</div>
           <h3>Wholesale & Retail</h3>
           <p>
             Products available for both individual customers
@@ -486,44 +875,69 @@
   </section>
 
 
-  <!-- WHY US -->
+  <!-- =========================
+       WHY CHOOSE US
+  ========================= -->
+
   <section class="why" id="why">
 
     <div class="wrap">
 
+      <div class="section-label">
+        WHY CHOOSE US?
+      </div>
+
       <h2 class="title">
-        Why Choose Us?
+        Benefits That Matter
       </h2>
 
       <p class="sub">
-        We focus on useful products, competitive pricing and
-        friendly customer service.
+        We focus on useful products, competitive pricing
+        and friendly customer service.
       </p>
+
 
       <div class="features">
 
         <div class="feature">
-          <div class="icon">🏷️</div>
-          <strong>Competitive Prices</strong>
-          <span>
-            Value-focused pricing for retail and wholesale customers.
-          </span>
+
+          <div class="feature-icon">🏷️</div>
+
+          <div>
+            <strong>Competitive Prices</strong>
+            <span>
+              Value-focused pricing for retail and wholesale customers.
+            </span>
+          </div>
+
         </div>
 
-        <div class="feature">
-          <div class="icon">📦</div>
-          <strong>Wide Range</strong>
-          <span>
-            Electronics and accessories for everyday requirements.
-          </span>
-        </div>
 
         <div class="feature">
-          <div class="icon">🤝</div>
-          <strong>Customer Support</strong>
-          <span>
-            Contact us directly for product availability and prices.
-          </span>
+
+          <div class="feature-icon">📦</div>
+
+          <div>
+            <strong>Wide Range</strong>
+            <span>
+              Electronics and accessories for everyday requirements.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="feature-icon">🎧</div>
+
+          <div>
+            <strong>Customer Support</strong>
+            <span>
+              Contact us directly for product availability and prices.
+            </span>
+          </div>
+
         </div>
 
       </div>
@@ -533,19 +947,27 @@
   </section>
 
 
-  <!-- CONTACT -->
-  <section id="contact">
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section class="contact" id="contact">
 
     <div class="wrap">
 
       <div class="contact-box">
 
-        <h2>Need Electronics?</h2>
+        <div>
 
-        <p>
-          Ask us about product availability, current prices
-          and wholesale requirements.
-        </p>
+          <h2>Need Electronics?</h2>
+
+          <p>
+            Ask us about product availability, current prices
+            and wholesale requirements.
+          </p>
+
+        </div>
+
 
         <div class="contact-buttons">
 
@@ -578,18 +1000,48 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
 
-    <p>
-      © 2026 <strong>Ansh & Vansh Electronics</strong>.
-      All Rights Reserved.
-    </p>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        ⚡ Ansh & Vansh Electronics
+
+        <span>
+          Manufacturer • Wholesale & Retail
+        </span>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Ansh & Vansh Electronics. All Rights Reserved.
+
+    </div>
 
   </footer>
 
 
   <!-- FLOATING WHATSAPP -->
+
   <a
     class="float-whatsapp"
     href="https://wa.me/919906520637"
